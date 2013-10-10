@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# require 'axiom-mongo-adapter'
+require 'axiom-mongo-adapter'
 
 require 'rom/support/axiom/adapter'
 require 'rom/support/axiom/adapter/data_objects'
@@ -10,8 +10,8 @@ module Axiom
 
     # A Axiom adapter for mongo
     #
-    class Mongo < DataObjects
-
+    class Mongo
+      extend Axiom::Adapter
       uri_scheme :mongo
 
     end # class Mongo
